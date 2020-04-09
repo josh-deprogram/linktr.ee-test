@@ -12,7 +12,9 @@ import {
 } from "./styles";
 
 const ShowLink = props => {
-	const onPress = () => {};
+	const onPress = () => {
+		props.url && window.open(props.url, "_blank");
+	};
 
 	return (
 		<StyledShow onClick={onPress}>
