@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { ReactComponent as Chevron } from "../../assets/icon/down-arrow.svg";
 import {

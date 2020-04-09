@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import SongKick from "../../assets/icon/by-songkick-wordmark.png";
 
-import { ShowLink } from "../";
+import { ShowLink, MusicLink, MusicPlayer } from "../";
 import { StyledLink, SongLogo, Shows } from "./styles";
 
 const LinkButton = props => {
     const [showsVisible, setShowsVisible] = useState(false)
+    const [musicVisible, setMusicVisible] = useState(false)
+    const [currentPlatform, setCurrentPlatform] = useState(null)
+    const [audioStream, setAudioStream] = useState(null)
+
 
 	useEffect(() => {}, []);
 
@@ -20,17 +24,25 @@ const LinkButton = props => {
                 setShowsVisible(!showsVisible)
 				break;
 			case "MUSIC":
+                /* Set the Music List elements Visible or not */
+                setMusicVisible(!musicVisible)
 				break;
 			default:
 				break;
         }
     };
+
+
     
 	return (
         <>
 		<StyledLink onClick={onPress}>
 			{props.children}
             </StyledLink>
+
+            {
+                /* if of type SHOW, render the shows accordion links   */
+            }
             {props.shows && showsVisible && 
                 <>
                 <Shows>
@@ -44,7 +56,39 @@ const LinkButton = props => {
 					/>
 				))}
                 </Shows>
-                <SongLogo><img src={SongKick} alt="song"/> </SongLogo>
+                <SongLogo><img src={SongKick} alt="song"/></SongLogo>
+                </>}
+            
+            {
+                /* if of type MUSIC, render the music accordion links   */
+            }
+            {props.musicLinks && musicVisible && 
+                <>
+                <Shows>
+                {
+                    /*  
+                        TODO: REAL MUSIC PLAYER,
+                        Custom player to change per platform, passing in the current platform and audio stream
+                    */
+                }
+                <MusicPlayer
+                    platform={currentPlatform}
+                    audioStream={audioStream}
+                />
+				{props.musicLinks.map(music => (
+					<MusicLink
+						key={music.platform}
+						platform={music.platform}
+                        platformUrl={music.platformUrl}
+                        url={music.url}
+                        onPress={() => {
+                            setAudioStream(music.audioStream)
+                            setCurrentPlatform(music.platform)
+                        }}
+
+					/>
+				))}
+                </Shows>
                 </>}
 		
         </>

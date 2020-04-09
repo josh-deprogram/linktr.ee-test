@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { COLORS, SIZE, THEME, FONT } from "../../config";
 
-export const StyledShow = styled.button`
+export const MusicPlatform = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	padding: ${SIZE.PADDING}px ${SIZE.PADDING * 2}px;
+	padding: 0 ${SIZE.PADDING * 2}px;
 	margin: 0;
 	border: 2px solid transparent;
 	background: ${COLORS.BLUE_GREY_4};
@@ -28,25 +27,42 @@ export const StyledShow = styled.button`
 		}
 	}
 `;
-export const Info = styled.div``;
-export const Date = styled.div`
-	font-size: ${FONT.HEADER};
-	padding: ${SIZE.PADDING / 2}px 0;
+export const Info = styled.button`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	outline: none;
+	width: 200px;
+	cursor: pointer;
+	text-align: left;
+	background: transparent;
+	border: 0;
+
+	&:hover {
+		color: ${COLORS.GREEN};
+	}
 `;
-export const Location = styled.div`font-size: ${FONT.SMALL};`;
-export const Soldout = styled.div`
-	font-size: ${FONT.SMALL};
-	margin-right: -${SIZE.PADDING}px;
+export const MainButton = styled.button`
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+	height: 100%;
+	padding: ${SIZE.PADDING}px 0;
+	background: transparent;
+	border: 0;
 `;
 export const Icon = styled.div`
 	height: 20px;
 	position: relative;
+
 	svg {
 		position: absolute;
 		top: -80px;
 		height: 20px;
 		transform: rotate(-90deg);
-
 		g {
 			fill: ${COLORS.BLUE_GREY};
 		}
@@ -60,3 +76,6 @@ export const Divivder = styled.div`
 	height: 1px;
 	background: rgba(0, 0, 0, 0.1);
 `;
+
+export const PlatIcon = styled.div``;
+export const PlatName = styled.div`margin-left: ${SIZE.PADDING}px;`;

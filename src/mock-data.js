@@ -54,32 +54,46 @@ export const API_DATA = {
 	],
 	musicLinks: [
 		{
-			provider: "Spotify",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Spotify",
+			platformUrl: "https://spotify.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "Apple Music",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Apple Music",
+			platformUrl: "https://apple.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "Soundcloud",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Soundcloud",
+			platformUrl: "https://soundcloud.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "YouTube Music",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "YouTube Music",
+			platformUrl: "https://youtube.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "Deezer",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Deezer",
+			platformUrl: "https://deezer.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "Tidal",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Tidal",
+			platformUrl: "https://tidal.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		},
 		{
-			provider: "Bandcamp",
-			url: "https://www.mixcloud.com/rogan-j/"
+			platform: "Bandcamp",
+			platformUrl: "https://bandcamp.com",
+			url: "https://www.mixcloud.com/rogan-j/",
+			audioStream: "some_tunes.mp3"
 		}
 	]
 };
