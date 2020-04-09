@@ -13,7 +13,7 @@ import {
 
 const MusicLink = props => {
 	const onPress = () => {
-		props.url && window.open(props.url, "_blank");
+		props.onPress();
 	};
 
 	const onPlatformPress = () => {

@@ -82,6 +82,7 @@ const LinkButton = props => {
                         platformUrl={music.platformUrl}
                         url={music.url}
                         onPress={() => {
+                            console.log('set player stream for ', music.platform)
                             setAudioStream(music.audioStream)
                             setCurrentPlatform(music.platform)
                         }}
