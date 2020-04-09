@@ -10,7 +10,6 @@ export const StyledShow = styled.button`
 	width: 100%;
 	padding: ${SIZE.PADDING}px ${SIZE.PADDING * 2}px;
 	margin: 0;
-	border-radius: ${SIZE.BORDER_RADIUS}px;
 	border: 2px solid transparent;
 	background: ${COLORS.BLUE_GREY_4};
 	color: ${THEME.text_color};

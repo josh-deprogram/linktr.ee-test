@@ -12,9 +12,9 @@ function App () {
 			<AppContainer>
 				<img src={Avatar} alt='avatar' />
 				<p>@yourname</p>
-				<LinkButton url={API_DATA.url}>Link URL</LinkButton>
-				<LinkButton shows={API_DATA.shows}>Shows</LinkButton>
-				<LinkButton musicLinks={API_DATA.musicLinks} >Music</LinkButton>
+				<LinkButton linkType="CLASSIC" url={API_DATA.url}>Link URL</LinkButton>
+				<LinkButton linkType="SHOW" shows={API_DATA.shows}>Shows</LinkButton>
+				<LinkButton linkType="MUSIC" musicLinks={API_DATA.musicLinks} >Music</LinkButton>
 				<Logo/>
 			</AppContainer>
 		</>

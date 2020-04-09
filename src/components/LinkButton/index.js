@@ -6,6 +6,8 @@ import { ShowLink } from "../";
 import { StyledLink, SongLogo, Shows } from "./styles";
 
 const LinkButton = props => {
+    const [showsVisible, setShowsVisible] = useState(false)
+
 	useEffect(() => {}, []);
 
 	const onPress = () => {
@@ -14,20 +16,22 @@ const LinkButton = props => {
 				if (props.url) window.open(props.url, "_blank");
 				break;
 			case "SHOW":
+                /* Set the Shows List elements Visible or not */
+                setShowsVisible(!showsVisible)
 				break;
 			case "MUSIC":
 				break;
 			default:
 				break;
-		}
-	};
-
+        }
+    };
+    
 	return (
         <>
 		<StyledLink onClick={onPress}>
 			{props.children}
             </StyledLink>
-            {props.shows &&
+            {props.shows && showsVisible && 
                 <>
                 <Shows>
 				{props.shows.map(show => (

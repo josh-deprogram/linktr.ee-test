@@ -12,14 +12,10 @@ import {
 } from "./styles";
 
 const ShowLink = props => {
-	useEffect(() => {
-		// console.log("LINK PROPS_", props);
-	}, []);
-
 	const onPress = () => {};
 
 	return (
-		<StyledShow onPress={onPress}>
+		<StyledShow onClick={onPress}>
 			<Info>
 				<Date>{props.date}</Date>
 				<Location>{props.location}</Location>
